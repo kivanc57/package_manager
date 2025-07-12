@@ -1,40 +1,13 @@
 
-# Go Modular Project
+# Package Manager
 
 ## Overview
 
-This project provides a modular Go-based solution comprising two command-line tools:
+This project provides a modular Go/Python and Powershell based framework for a very efficient package manager, where the user can filter, exclude, download and upload necessary packages within a given artifactory.
 
 - **Downloader**: Downloads files from specified URLs, manages extraction, and processes packages.
 - **Package Manager**: Processes JSON package lists, checks availability in Chocolatey repositories, and logs missing packages.
 
-*The package manager on the new version is implemented both using Go and Python because of maintability. Feel free to use your flavor of choice.*
-
-
-## Project Structure
-
-```
-project-root/
-├── cmd/
-│   ├── downloader/
-│   │   └── main.go
-│   └── packagemanager/
-│       └── main.go
-├── internal/
-│   ├── common/
-│   │   ├── env.go
-│   │   └── utils.go
-│   ├── downloader/
-│   │   └── downloader.go
-│   └── packagemanager/
-│       └── package.go
-├── data/
-│   └── example.txt
-├── output/
-├── .env
-├── go.mod
-└── go.sum
-```
 
 ## Installation
 
@@ -105,19 +78,6 @@ Install dependencies with:
 ```bash
 pip install requests python-dotenv
 ```
-
-### Python Code Structure
-
-- `main.py`: Entry point that reads input, iterates packages, and triggers processing.
-- `package_downloader/`
-  - `file_utils.py`: File and directory utility functions.
-  - `download_utils.py`: Downloading files from URLs.
-  - `package_utils.py`: Renaming and extracting packages.
-  - `parser.py`: Parsing package lines.
-  - `processor.py`: Handles the package processing workflow.
-
-For details, see the [Python modularization conversation](#).
-
 ---
 
 ## Output
